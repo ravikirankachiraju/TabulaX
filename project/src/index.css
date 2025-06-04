@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-slate-800 bg-slate-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-slate-900;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  p {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-200 ease-in-out;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-slate-200 text-slate-800 hover:bg-slate-300;
+  }
+  
+  .btn-accent {
+    @apply bg-violet-600 text-white hover:bg-violet-700 shadow-md hover:shadow-lg;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-200;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .feature-card {
+    @apply transition-all duration-300 rounded-xl;
+  }
+  
+  .feature-card:hover {
+    @apply shadow-md bg-white -translate-y-1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Table Styles */
+.data-table {
+  @apply w-full border-collapse;
+}
+
+.data-table th {
+  @apply bg-slate-100 text-slate-700 font-semibold p-3 text-left border-b border-slate-200;
+}
+
+.data-table td {
+  @apply p-3 border-b border-slate-100;
+}
+
+.data-table tbody tr:hover {
+  @apply bg-blue-50;
+}
